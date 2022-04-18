@@ -2,11 +2,18 @@
 // that can be found in the License file.
 //
 // Author: Shuo Chen (chenshuo at chenshuo dot com)
+#define DEBUG
 
 #include "muduo/base/Thread.h"
 #include "muduo/base/CurrentThread.h"
+
+#ifndef DEBUG
 #include "muduo/base/Exception.h"
 #include "muduo/base/Logging.h"
+#else
+#include "muduo/base/Timestamp.h"
+#include <sys/prctl.h>
+#endif
 
 #include <type_traits>
 
@@ -81,6 +88,7 @@ struct ThreadData
       func_();
       muduo::CurrentThread::t_threadName = "finished";
     }
+#ifndef DEBUG
     catch (const Exception& ex)
     {
       muduo::CurrentThread::t_threadName = "crashed";
@@ -89,6 +97,7 @@ struct ThreadData
       fprintf(stderr, "stack trace: %s\n", ex.stackTrace());
       abort();
     }
+#endif
     catch (const std::exception& ex)
     {
       muduo::CurrentThread::t_threadName = "crashed";
@@ -180,7 +189,9 @@ void Thread::start()
   {
     started_ = false;
     delete data; // or no delete?
+#ifndef DEBUG
     LOG_SYSFATAL << "Failed in pthread_create";
+#endif
   }
   else
   {

@@ -4,6 +4,8 @@ set(base_SRCS
     CountDownLatch.cc
     Timestamp.cc
     TimeZone.cc
+    Date.cc
+    Thread.cc
 )
 
 add_library(muduo_base SHARED ${base_SRCS})
