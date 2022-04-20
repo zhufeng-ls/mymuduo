@@ -9,3 +9,6 @@ target_link_libraries(gzipfile_test muduo_base z)
 
 add_executable(timestamp_test Timestamp_unittest.cc)
 target_link_libraries(timestamp_test muduo_base)
+
+add_executable(blockingqueue_bench BlockingQueue_bench.cc)
+target_link_libraries(blockingqueue_bench muduo_base)
