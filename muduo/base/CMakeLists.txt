@@ -3,6 +3,8 @@ set(base_SRCS
     CountDownLatch.cc
     CurrentThread.cc
     Date.cc
+    Exception.cc
+    ProcessInfo.cc
     Thread.cc
     Timestamp.cc
     TimeZone.cc 

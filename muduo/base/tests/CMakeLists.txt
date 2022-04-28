@@ -12,3 +12,18 @@ target_link_libraries(timestamp_test muduo_base)
 
 add_executable(blockingqueue_bench BlockingQueue_bench.cc)
 target_link_libraries(blockingqueue_bench muduo_base)
+
+add_executable(blockingqueue_bench2 BlockingQueue_bench2.cc)
+target_link_libraries(blockingqueue_bench2 muduo_base)
+
+add_executable(blockingqueue_test BlockingQueue_test.cc)
+target_link_libraries(blockingqueue_test muduo_base)
+
+add_executable(boundedblockingqueue_test BoundedBlockingQueue_test.cc)
+target_link_libraries(boundedblockingqueue_test muduo_base)
+
+add_executable(data_unittest Date_unittest.cc)
+target_link_libraries(data_unittest muduo_base)
+
+add_executable(exception_test Exception_test.cc)
+target_link_libraries(exception_test muduo_base)

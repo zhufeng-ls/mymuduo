@@ -34,6 +34,7 @@ string stackTrace(bool demangle)
     {
       if (demangle)
       {
+          printf("**************Exception**************\n");
         // https://panthema.net/2008/0901-stacktrace-demangled/
         // bin/exception_test(_ZN3Bar4testEv+0x79) [0x401909]
         char* left_par = nullptr;
