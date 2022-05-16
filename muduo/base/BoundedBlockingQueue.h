@@ -18,7 +18,7 @@ namespace muduo
 
 template <typename T> class BoundedBlockingQueue : noncopyable
 {
-   public:
+public:
     explicit BoundedBlockingQueue(int maxSize)
         : mutex_()
         , notEmpty_(mutex_)
@@ -80,7 +80,7 @@ template <typename T> class BoundedBlockingQueue : noncopyable
         return queue_.capacity();
     }
 
-   private:
+private:
     mutable MutexLock mutex_;
     Condition notEmpty_ GUARDED_BY(mutex_);
     Condition notFull_ GUARDED_BY(mutex_);

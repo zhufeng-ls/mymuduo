@@ -4,6 +4,7 @@ set(base_SRCS
     CurrentThread.cc
     Date.cc
     Exception.cc
+    FileUtil.cc
     ProcessInfo.cc
     Thread.cc
     Timestamp.cc

@@ -27,3 +27,6 @@ target_link_libraries(data_unittest muduo_base)
 
 add_executable(exception_test Exception_test.cc)
 target_link_libraries(exception_test muduo_base)
+
+add_executable(processinfo_test ProcessInfo_test.cc)
+target_link_libraries(processinfo_test muduo_base)
