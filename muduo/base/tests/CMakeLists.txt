@@ -30,3 +30,21 @@ target_link_libraries(exception_test muduo_base)
 
 add_executable(processinfo_test ProcessInfo_test.cc)
 target_link_libraries(processinfo_test muduo_base)
+
+add_executable(threadlocal_test ThreadLocal_test.cc)
+target_link_libraries(threadlocal_test muduo_base)
+
+add_executable(threadlocalSingleton_test ThreadLocalSingleton_test.cc)
+target_link_libraries(threadlocalSingleton_test muduo_base)
+
+add_executable(threadpool_test ThreadPool_test.cc)
+target_link_libraries(threadpool_test muduo_base)
+
+add_executable(logstream_bench LogStream_bench.cc)
+target_link_libraries(logstream_bench muduo_base)
+
+add_executable(logfile_test LogFile_test.cc)
+target_link_libraries(logfile_test muduo_base)
+
+add_executable(asynclogging_test AsyncLogging_test.cc)
+target_link_libraries(asynclogging_test muduo_base)
