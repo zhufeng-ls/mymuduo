@@ -7,7 +7,12 @@ endif()
 
 set(net_SRCS
     Buffer.cc
-    SocketsOps.cc    
+    Channel.cc
+    EventLoop.cc
+    Poller.cc
+    SocketsOps.cc
+    Timer.cc
+    TimerQueue.cc    
 )
 
 add_library(muduo_net ${net_SRCS})
@@ -17,7 +22,15 @@ install(TARGETS muduo_net DESTINATION lib)
 
 set(HEADERS
   Buffer.h
+  Callbacks.h
+  Channel.h
   Endian.h
+  EventLoop.h
+  Poller.h
+  SocketsOps.h
+  Timer.h
+  TimerId.h
+  TimerQueue.h
 )
 install(FILES ${HEADERS} DESTINATION include/muduo/net)
 

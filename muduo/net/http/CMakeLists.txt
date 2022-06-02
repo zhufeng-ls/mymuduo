@@ -1,5 +1,5 @@
 set(http_SRCS
-    # HttpContext.cc
+    HttpContext.cc
     HttpResponse.cc
 )
 
@@ -8,7 +8,7 @@ target_link_libraries(muduo_http muduo_net)
 
 install(TARGETS muduo_http DESTINATION lib)
 set(HEADERS
-    # HttpContext.h
+    HttpContext.h
     HttpResponse.h
 )
 install(FILES ${HEADERS} DESTINATION include/muduo/net/http) 
